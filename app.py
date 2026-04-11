@@ -103,6 +103,26 @@ def parse_latlng(request):
     return slat, slng, tlat, tlng
 
 
+@app.route("/bfs-path")
+def bfs_path():
+    """Calcula caminho usando BFS (menor número de nós, não menor distância)"""
+    slat, slng, tlat, tlng = parse_latlng(request)
+
+    source = ox.distance.nearest_nodes(G, slng, slat)
+    target = ox.distance.nearest_nodes(G, tlng, tlat)
+
+    path, visited = bfs(G, source, target)
+
+    if not path:
+        return jsonify({"error": "No path found"}), 404
+
+    return jsonify({
+        "path": nodes_to_coords(path),
+        "nodes_visited": visited,
+        "steps": len(path),
+        "algorithm": "bfs"
+    })
+    
 
 @app.route("/shortest-path")
 def shortest_path():
