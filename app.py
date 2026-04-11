@@ -50,7 +50,41 @@ def dijkstra(graph, source, target):
     return path, dist[target], visited_count
 
 
+def bfs(graph, source, target):
+    visited = set()
+    queue = deque([source])
+    prev = {node: None for node in graph.nodes}
+    visited_count = 0
 
+    visited.add(source)
+
+    while queue:
+        u = queue.popleft()
+        visited_count += 1
+
+        if u == target:
+            break
+
+        "percorre vizinhos"
+        for v in graph[u]:
+            if v not in visited:
+                visited.add(v)
+                prev[v] = u
+                queue.append(v)
+
+    "reconstrução do caminho"
+    path = []
+    node = target
+    while node is not None:
+        path.append(node)
+        node = prev[node]
+    path.reverse()
+
+    if not path or path[0] != source:
+        return [], visited_count
+
+    return path, visited_count
+    
 
 def nodes_to_coords(path):
     """Acha a latitude e longitude de cada nó do caminho"""
