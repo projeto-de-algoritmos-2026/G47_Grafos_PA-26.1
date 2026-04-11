@@ -8,7 +8,7 @@
 | Matrícula | Aluno |
 | -- | -- |
 | 221022060 | Leonardo Fachinello Bonetti |
-|  |  |
+| 241025784 | João Paulo da Silva Pereira|
 
 ## Sobre 
 Descreva os objetivos do seu projeto e como ele funciona. 
