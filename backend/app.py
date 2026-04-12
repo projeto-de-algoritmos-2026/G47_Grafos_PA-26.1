@@ -2,11 +2,26 @@ import heapq
 from collections import deque
 
 import osmnx as ox
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../frontend")
 CORS(app)
+
+
+@app.route("/")
+def index():
+    return send_from_directory(app.static_folder, "index.html")
+
+
+@app.route("/style.css")
+def style_css():
+    return send_from_directory(app.static_folder, "style.css")
+
+
+@app.route("/app.js")
+def app_js():
+    return send_from_directory(app.static_folder, "app.js")
 
 
 center = ox.geocode("Asa Norte, Brasília, Distrito Federal, Brasil")
