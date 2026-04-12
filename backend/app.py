@@ -10,7 +10,7 @@ CORS(app)
 
 
 center = ox.geocode("Asa Norte, Brasília, Distrito Federal, Brasil")
-G = ox.graph_from_point(center, dist=3000, network_type="walk")
+G = ox.graph_from_point(center, dist=3000, network_type="drive")
 print(f"Graph loaded: {len(G.nodes)} nodes, {len(G.edges)} edges")
 
 
@@ -159,7 +159,7 @@ def graph_info():
         "node_count": len(G.nodes),
         "edge_count": len(G.edges),
         "place": "Asa Norte, Brasília, Distrito Federal, Brasil",
-        "network_type": "walk",
+        "network_type": "drive",
     })
 
 

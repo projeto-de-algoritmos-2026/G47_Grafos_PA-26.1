@@ -6,10 +6,10 @@ PIP = $(VENV)/bin/pip
 
 install:
 	python3 -m venv $(VENV)
-	$(PIP) install -r requirements.txt
+	$(PIP) install -r backend/requirements.txt
 
 run:
-	$(PYTHON) app.py
+	$(PYTHON) backend/app.py
 
 clean:
 	rm -rf $(VENV) __pycache__
