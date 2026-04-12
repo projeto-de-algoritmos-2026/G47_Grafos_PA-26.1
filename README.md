@@ -28,7 +28,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 **Frontend**: HTML + CSS + JavaScript (Leaflet.js, sem framework)<br>
 
 ## Uso 
-1. Abra o navegador em http://localhost:5000
+1. Abra o navegador em [http://localhost:5000](https://unpkg.com/leaflet@1.9.4/dist/leaflet.js)
 2. Clique em um ponto no mapa para definir a origem (marcador azul)
 3. Clique em outro ponto para definir o destino (marcador vermelho)
 4. A rota é calculada automaticamente e desenhada no mapa
