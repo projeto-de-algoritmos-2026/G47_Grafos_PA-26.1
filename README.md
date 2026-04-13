@@ -34,6 +34,33 @@ Os dois algoritmos podem ser executados simultaneamente, permitindo comparar vis
 **Framework backend**: Flask<br>
 **Frontend**: HTML + CSS + JavaScript (Leaflet.js, sem framework)<br>
 
+Você pode instalar de duas formas:
+
+Com make:
+```bash
+make install
+```
+
+Sem make:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r backend/requirements.txt
+```
+
+Para rodar o projeto:
+
+Com make:
+```bash
+make run
+```
+
+Sem make:
+```bash
+source venv/bin/activate
+python backend/app.py
+```
+
 ## Uso 
 1. Abra o navegador em [http://localhost:5000](https://unpkg.com/leaflet@1.9.4/dist/leaflet.js)
 2. Clique em um ponto no mapa para definir a origem (marcador azul)
