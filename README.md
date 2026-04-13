@@ -20,7 +20,14 @@ BFS (Busca em Largura) — encontra o caminho com o menor número de ruas percor
 Os dois algoritmos podem ser executados simultaneamente, permitindo comparar visualmente as rotas geradas por cada abordagem.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![Screenshot 1](assets/asset_1.png)
+*App sem nenhum ponto selecionado*
+
+![Screenshot 2](assets/asset_2.png)
+*Rotas selecionadas com Djistka e BFS ao mesmo tempo*
+
+![Screenshot 3](assets/asset_3.png)
+*Rota com somente BFS*
 
 ## Instalação 
 **Linguagem**: Python 3.10+<br>
