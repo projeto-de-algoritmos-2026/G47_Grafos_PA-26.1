@@ -4,6 +4,8 @@
 **Número da Lista**: 1<br>
 **Conteúdo da Disciplina**: Grafos 1<br>
 
+Link apresentação: https://youtu.be/wMVlRk-6DAw
+
 ## Alunos
 | Matrícula | Aluno |
 | -- | -- |
